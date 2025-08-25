@@ -1,0 +1,44 @@
+{
+  "name": "ai-sdk-learning",
+  "version": "1.0.0",
+  "description": "Learning project for AI SDKs with various examples",
+  "main": "index.js",
+  "type": "module",
+  "scripts": {
+    "start": "pnpm run build && node dist/index.js",
+    "dev": "tsx watch src/index.ts",
+    "build": "tsc",
+    "text-generation": "tsx src/cli/main.ts text-generation",
+    "streaming-text": "tsx src/cli/main.ts streaming-text",
+    "system-prompt": "tsx src/cli/main.ts system-prompt",
+    "dynamic-models": "tsx src/cli/main.ts dynamic-models"
+  },
+  "keywords": [
+    "ai",
+    "sdk",
+    "openai",
+    "vercel",
+    "streaming",
+    "pdf",
+    "image-description",
+    "tool-calling"
+  ],
+  "author": "Your Name",
+  "license": "MIT",
+  "dependencies": {
+    "@ai-sdk/anthropic": "^0.0.50",
+    "@ai-sdk/google": "^0.0.52",
+    "@ai-sdk/openai": "^0.0.66",
+    "ai": "^3.0.0",
+    "dotenv": "^16.6.1",
+    "openai": "^4.67.3",
+    "pdf-lib": "^1.17.1",
+    "sharp": "^0.33.5",
+    "zod": "^3.23.8"
+  },
+  "devDependencies": {
+    "@types/node": "^22.9.0",
+    "tsx": "^4.19.2",
+    "typescript": "^5.6.3"
+  }
+}
