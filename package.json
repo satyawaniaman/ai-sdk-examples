@@ -11,7 +11,8 @@
     "text-generation": "tsx src/cli/main.ts text-generation",
     "streaming-text": "tsx src/cli/main.ts streaming-text",
     "system-prompt": "tsx src/cli/main.ts system-prompt",
-    "dynamic-models": "tsx src/cli/main.ts dynamic-models"
+    "dynamic-models": "tsx src/cli/main.ts dynamic-models",
+    "persistent-chat": "tsx src/cli/main.ts persistent-chat"
   },
   "keywords": [
     "ai",
@@ -29,8 +30,10 @@
     "@ai-sdk/anthropic": "^0.0.50",
     "@ai-sdk/google": "^0.0.52",
     "@ai-sdk/openai": "^0.0.66",
+    "@hono/node-server": "^1.19.0",
     "ai": "^3.0.0",
     "dotenv": "^16.6.1",
+    "hono": "^4.9.4",
     "openai": "^4.67.3",
     "pdf-lib": "^1.17.1",
     "sharp": "^0.33.5",

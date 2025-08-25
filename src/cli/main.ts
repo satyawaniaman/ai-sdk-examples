@@ -3,7 +3,7 @@ import { generateTextExample } from '../examples/01-text-generation/main';
 import { streamTextExample } from '../examples/02-streaming-text/main';
 import { systemPromptExample } from '../examples/03-system-prompt/main';
 import { dynamicModelExample, getAvailableModels, ModelName } from '../examples/04-dynamic-models/main';
-
+import {  runPersistentChat } from '../examples/05-persistent-chat/main';
 const showUsage = () => {
   console.log('Usage: tsx src/cli/main.ts <example>');
   console.log('\nAvailable examples:');
@@ -11,6 +11,7 @@ const showUsage = () => {
   console.log('  streaming-text   - Stream text generation using AI SDK');
   console.log('  system-prompt    - Generate text with system prompt');
   console.log('  dynamic-models   - Compare different AI models');
+  console.log('  persistent-chat  - Chat with persistent history');
   console.log('\nExample:');
   console.log('  tsx src/cli/main.ts text-generation');
 };
@@ -23,7 +24,7 @@ const main = async () => {
     process.exit(1);
   }
   
-  if (!['text-generation', 'streaming-text', 'system-prompt', 'dynamic-models'].includes(example)) {
+  if (!['text-generation', 'streaming-text', 'system-prompt', 'dynamic-models','persistent-chat'].includes(example)) {
     console.error(`Error: Unknown example "${example}"`);
     showUsage();
     process.exit(1);
@@ -33,6 +34,16 @@ const main = async () => {
     input: process.stdin,
     output: process.stdout
   });
+  
+  // Handle persistent-chat differently since it manages its own readline loop
+  if (example === 'persistent-chat') {
+    try {
+      await runPersistentChat(rl);
+    } catch (error) {
+      console.error('Error:', error instanceof Error ? error.message : String(error));
+    }
+    return;
+  }
   
   let selectedModel: ModelName | undefined;
   

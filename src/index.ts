@@ -1,11 +1,13 @@
 import 'dotenv/config';
-import { logger } from './utils/helpers.js';
 
 const main = async () => {
   console.log('AI SDK Learning Project');
   console.log('A simple, clean implementation for testing AI SDK capabilities.');
   console.log('\nAvailable Examples:');
-  console.log('• Text Generation: npm run text-generation');
+  console.log('• Text Generation: pnpm run text-generation');
+  console.log('• Streaming Text: pnpm run streaming-text');
+  console.log('• System Prompt: pnpm run system-prompt');
+  console.log('• Dynamic Models: pnpm run dynamic-models');
   
   console.log('\nSupported AI Providers:');
   console.log('• OpenAI (GPT models)');
@@ -15,9 +17,10 @@ const main = async () => {
   console.log('\nQuick Start:');
   console.log('1. Copy .env.example to .env');
   console.log('2. Add at least one API key');
-  console.log('3. Run: npm run text-generation');
+  console.log('3. Run any example above');
   
-  console.log('\nThe example will automatically use the first available API key!');
+  console.log('\nThe examples will automatically use the first available API key!');
+  console.log('\nScript completed successfully. Exiting...');
 };
 
 main().catch(console.error);

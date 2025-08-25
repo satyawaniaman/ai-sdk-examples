@@ -1,0 +1,16 @@
+{
+  "id": "12",
+  "messages": [
+    {
+      "role": "assistant",
+      "content": [
+        {
+          "type": "text",
+          "text": "Hello! How can I assist you today?"
+        }
+      ]
+    }
+  ],
+  "createdAt": "2025-08-25T20:06:30.920Z",
+  "updatedAt": "2025-08-25T20:06:35.529Z"
+}

@@ -1,0 +1,16 @@
+{
+  "id": "hi there",
+  "messages": [
+    {
+      "role": "assistant",
+      "content": [
+        {
+          "type": "text",
+          "text": "It seems like your message is incomplete. Could you please provide more context or clarify what you mean by \"one\"? I'm here to help!"
+        }
+      ]
+    }
+  ],
+  "createdAt": "2025-08-25T20:05:37.710Z",
+  "updatedAt": "2025-08-25T20:05:58.953Z"
+}
